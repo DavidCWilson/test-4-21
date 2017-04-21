@@ -1,5 +1,7 @@
 body {
 	background: #B4AF91 url("img/bg-tile.jpg") repeat left top;
+	color: #000;
+	padding: 0 0 60px;
 }
 
 ul li{
@@ -16,14 +18,45 @@ ul li{
 	background-color: rgba(120, 119, 70, 0.88);
 }
 
+h2 {
+	background-color: #787746;
+	border-radius: 5px;
+	max-width: 250px;
+	margin: 5px auto 0;
+	padding: 5px;
+}
+
 h3 {
-	background-color: #40411E;
+	background-color: #787746;
 	border-radius: 50%;
 	color: #B4AF91;
 }
 
-td:nth-child(1n+2) {
+.github td a {
+	color: #000;
+}
+
+.github td a:visited {
+	color: #B469C0;
+}
+
+.github td a:hover {
+	border: 1px solid #B469C0;
+}
+
+.github td a:active {
 	background-color: #B4AF91;
+	border-radius: 10px;
+}
+
+tr:nth-child(2n+2) {
+	background-color: #40411E;
+}
+
+table img {
+	max-width: 250px;
+	max-height: 250px;
+	margin: 50px;
 }
 
 footer {
