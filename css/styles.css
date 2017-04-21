@@ -1,18 +1,40 @@
 body {
-	background: #B4AF91 url("img/bg-tile.jpg") repeat left top;
+	background: #B4AF91;
 	color: #000;
-	padding: 0 0 60px;
+	padding: 60px 0;
 }
 
-ul li{
-	padding: 0 0 0 10px;
+abbr {
+	text-decoration: none !important;
 }
 
-/*** #logo {
-	margin: 0 0 0 -20px;
-	border-radius: 50%;
-	opacity: .8;
-} ***/
+/********* Header **********/
+
+header{
+	margin: 0 100px;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	background-color: rgba(201, 181, 139, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+	border-radius: 0 0 10px 10px;
+	z-index: -1;
+}
+
+header h1 {
+	margin: 0;
+	padding: 10px 0;
+}
+
+/********* Main content **********/
+
+.middle-body {
+	z-index: 1;
+}
 
 .main-content {
 	background-color: rgba(120, 119, 70, 0.88);
@@ -32,6 +54,16 @@ h3 {
 	color: #B4AF91;
 }
 
+.bio {
+	margin: 20px 40px 10px;
+}
+
+/********* Github table styling **********/
+
+.github {
+	font-size: 12px;
+}
+
 .github td a {
 	color: #000;
 }
@@ -41,7 +73,10 @@ h3 {
 }
 
 .github td a:hover {
-	border: 1px solid #B469C0;
+	border-bottom: 1px;
+	border-right: 1px;
+	border-color: #fff;
+	border-style: inset;
 }
 
 .github td a:active {
@@ -53,17 +88,28 @@ tr:nth-child(2n+2) {
 	background-color: #40411E;
 }
 
+/********* List styling **********/
+
+ul li{
+	padding: 0 0 0 10px;
+}
+
+/********* Gallery **********/
+
 table img {
 	max-width: 250px;
 	max-height: 250px;
 	margin: 50px;
 }
 
+/********* Footer **********/
+
 footer {
+	margin: 0 100px;
 	color: #000;
 	font-weight: bold;
 	text-align: center;
-	background-color: rgba(192, 48, 0, 0.8);
+	background-color: rgba(201, 181, 139, 0.9);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -75,4 +121,41 @@ footer {
 footer a {
 	text-decoration: none;
 	color: #000;
+}
+
+/********* Media queries **********/
+
+@media all and (max-width: 768px){
+	body.main-content {
+		background-color: rgba(79, 69, 53, 0.88);
+	}
+}
+
+@media screen and (max-width: 768px){
+	.github td {text-align: center;}
+}
+/********* Animation Fun **********/
+
+@keyframes color-strobe {
+	0% {border: 1px solid #000;}
+	50% {border: 1px solid #fff;}
+	100% {border: 1px solid #000;}
+}
+
+.strobe {
+	animation-name: color-strobe;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes from-the-right {
+	0% {left: 3000px;}
+	100% {left: 0;}
+}
+
+.from-the-right {
+
+	position: relative;
+	animation-name: from-the-right;
+	animation-duration: 5s;
 }
