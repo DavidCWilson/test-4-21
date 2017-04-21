@@ -1,3 +1,45 @@
-.row{
-	border: 1px solid red;
+body {
+	background: #B4AF91 url("img/bg-tile.jpg") repeat left top;
+}
+
+ul li{
+	padding: 0 0 0 10px;
+}
+
+/*** #logo {
+	margin: 0 0 0 -20px;
+	border-radius: 50%;
+	opacity: .8;
+} ***/
+
+.main-content {
+	background-color: rgba(120, 119, 70, 0.88);
+}
+
+h3 {
+	background-color: #40411E;
+	border-radius: 50%;
+	color: #B4AF91;
+}
+
+td:nth-child(1n+2) {
+	background-color: #B4AF91;
+}
+
+footer {
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	background-color: rgba(192, 48, 0, 0.8);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+	border-radius: 10px 10px 0 0;
+}
+
+footer a {
+	text-decoration: none;
+	color: #000;
 }
